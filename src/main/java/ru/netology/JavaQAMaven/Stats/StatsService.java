@@ -36,8 +36,9 @@ public class StatsService {
 
     public int numberSalesBelowAverage(int[] sales) {
         int numberSales = 0;
-        for (int i : sales) {
-            if (i < averageSalesAmount(sales)) {
+        int averageSales = averageSalesAmount(sales);
+        for (int salesInMonth : sales) {
+            if (salesInMonth < averageSales) {
                 numberSales++;
             }
         }
@@ -46,8 +47,9 @@ public class StatsService {
 
     public int numberSalesAboveAverage(int[] sales) {
         int numberSales = 0;
-        for (int i : sales) {
-            if (i > averageSalesAmount(sales)) {
+        int averageSales = averageSalesAmount(sales);
+        for (int salesInMonth : sales) {
+            if (salesInMonth > averageSales) {
                 numberSales++;
             }
         }
